@@ -1,11 +1,13 @@
-# Ignore root data folder
+# Root data folder
 /data/
 
-# Optional: common Python / ML ignores (add if relevant)
+# VS Code temporary files
+.virtual_documents/
+
+# Common extra ignores (optional but recommended)
+.ipynb_checkpoints/
 __pycache__/
 *.py[cod]
-*.egg-info/
 .venv/
 .env
-*.log
 .DS_Store
