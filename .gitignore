@@ -1,0 +1,11 @@
+# Ignore root data folder
+/data/
+
+# Optional: common Python / ML ignores (add if relevant)
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+.env
+*.log
+.DS_Store
