@@ -1,5 +1,6 @@
 # Root data folder
 /data/
+/example/
 
 # VS Code temporary files
 .virtual_documents/
