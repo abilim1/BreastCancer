@@ -2,17 +2,25 @@
 
 ## Overview
 
-This project performs **binary classification** (Benign vs Malignant) on the [BreakHis](https://web.inf.ufpr.br/vri/databases/breast-cancer-histopathological-database-breakhis/) histopathology dataset using a custom Convolutional Neural Network trained **from scratch**.
+This project performs **binary classification** (Benign vs Malignant) on a cleaned version of the BreakHis histopathology dataset using a custom Convolutional Neural Network trained **from scratch**.
+
+**Dataset used**: [anaselmasry/breast-cancer-dataset](https://www.kaggle.com/datasets/anaselmasry/breast-cancer-dataset) on Kaggle.
 
 The primary focus of this work is **methodological correctness**, particularly avoiding patient-level data leakage.
 
 ## Dataset
 
-- **Name**: BreakHis
+- **Source**: [Breast Cancer Dataset (anaselmasry)](https://www.kaggle.com/datasets/anaselmasry/breast-cancer-dataset) — a cleaned version of the original BreakHis dataset
 - **Task**: Binary Classification (Benign vs Malignant)
-- **Total Images**: ~7,909
-- **Total Patients**: 82
-- **Magnifications**: 40X, 100X, 200X, 400X (all magnifications used together)
+- **Total Images**: ~7,783 (Benign: 2,479 | Malignant: 5,304)
+- **Original Patients**: 82
+- **Magnifications**: 40X, 100X, 200X, 400X (all magnifications mixed together)
+- **Folder Structure**:
+  ```
+  Data/
+  ├── benign/
+  └── malignant/
+  ```
 - **Image Size**: Original ~700×460 → Resized to 224×224
 
 ## Key Methodology
@@ -110,7 +118,7 @@ Actual Malignant  221        632
 
 ## How to Run
 
-1. Place the BreakHis dataset in the `Data/` folder with the structure shown above.
+1. Download the dataset from [Kaggle](https://www.kaggle.com/datasets/anaselmasry/breast-cancer-dataset) and place it in the `Data/` folder with the structure shown above.
 2. Open `main.ipynb` and run all cells sequentially.
 3. The best model will be saved as `best_model.pth`.
 
@@ -127,4 +135,3 @@ Actual Malignant  221        632
 ## Author
 
 Mackhem Chuah
-```
